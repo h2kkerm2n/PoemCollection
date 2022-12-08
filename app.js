@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
@@ -12,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get("/", function (req, res) {
-  res.send("A little poet!");
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.listen(process.env.PORT, () => {

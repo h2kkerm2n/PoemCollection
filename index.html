@@ -4,8 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
     <title>Poem Collection</title>
   </head>
-  <body></body>
+  <body>
+    <div class="logo-wrapper">
+      <div class="logo">
+        <img src="./img/landpage.jpg" alt="logo" height="250" />
+      </div>
+    </div>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a class="active" href="#Poems">Poems</a></li>
+      <li><a class="active" href="#Add new">Add new</a></li>
+      <li><a class="active" href="#TOP3">TOP3</a></li>
+      <li><a class="active" href="#Login">Login</a></li>
+      <li><a class="active" href="#LogOut">LoginOut</a></li>
+    </ul>
+    <div class="blog-wrapper">
+      <div class="blogpic">
+        <img src="./img/blogpic.jpg" alt="blogpic" />
+        <div class="form">
+          <h5>Add Comment</h5>
+          Name: <input type="text" id="name" /> <br /><br />
+          Date: <input type="date" id="date" /> <br /><br />
+          Body: <textarea rows="10" col="30" id="bodyText"></textarea><br />
+          <input type="button" id="addComment" value="Add Comment" />
+        </div>
+        <div id="container"></div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Author: Poetry<br />
+        <a href="mailto:poetry@gmail.com">poetry@gmail.com</a>
+      </p>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
 </html>
