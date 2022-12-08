@@ -7,6 +7,7 @@ const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const swaggerDocument = YAML.load("./swagger.yaml");
 const cookieParser = require("cookie-parser");
+const poemRoutes = require("./routes/poemRoutes");
 const userRoutes = require("./routes/userRoutes");
 
 const corsOptions = {
@@ -34,7 +35,7 @@ mongoose
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
-
+app.use("/api/v1/poems", poemRoutes);
 app.use("/api/v1/users", userRoutes);
 
 app.listen(process.env.PORT, () => {
