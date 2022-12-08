@@ -35,6 +35,7 @@ footer {
 }
 /* form panel */
 .form {
+  text-align: center;
   padding: 10px;
   border: 1px solid #000;
   margin-bottom: 10px;
